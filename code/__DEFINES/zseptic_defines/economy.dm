@@ -3,7 +3,7 @@
 
 /// Default exponent for generating export maximum_cost
 #define DEFAULT_MAXIMUM_COST_EXPONENT 1.2
-/// Export graph depth, aka how many values we store
+/// Export graph depth, aka how many export values we store for export graphs
 #define EXPORT_GRAPH_DEPTH 60
 
 #define ACCOUNT_MASTER "MSR"

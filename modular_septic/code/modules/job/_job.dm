@@ -1,4 +1,11 @@
 /datum/job
+	/// How much money a job starts the round with
+	paycheck = 25 DOLLARS
+	/**
+	 * How much money we initially get paid from the master budget every few minutes
+	 * Can be changed by the head of personnel
+	*/
+	var/initial_salary = 0
 	/// Stat sheet this job uses, if any (ADDITIVE)
 	var/attribute_sheet
 	/// With this set to TRUE, the loadout will be applied before a job clothing will be
