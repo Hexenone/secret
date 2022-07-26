@@ -1,13 +1,14 @@
+// this is retarded nigger code and should be reworked to not use the god damn uplink component
 /datum/computer_file/program/uplink
 	filename = "limewire"
 	filedesc = "LimeWire 1.2"
 	category = PROGRAM_CATEGORY_MISC
-	program_icon = "tasks"
 	program_icon_state = "assign"
 	requires_ntnet = FALSE
 	available_on_ntnet = FALSE
 	undeletable = FALSE
-	size = 8
+	size = 6
+	program_icon = "lemon"
 	var/stored_tc = 20
 	var/datum/component/uplink/uplink
 

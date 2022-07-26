@@ -34,7 +34,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 	var/list/opened_positions = list()
 
 /datum/computer_file/program/job_management/New()
-	..()
+	. = ..()
 	change_position_cooldown = CONFIG_GET(number/id_console_jobslot_delay)
 
 

@@ -14,7 +14,7 @@
 	/// Standard deviation of price variation, which uses normal distribution
 	var/standard_deviation = 0.01
 	/// Mean of price variation, which uses normal distribution
-	var/mean = 0.001
+	var/mean = 0
 	/// Should this export be invisible to the cargo export console?
 	var/secret = FALSE
 
@@ -24,8 +24,10 @@
 	if(isnull(maximum_cost))
 		if(cost >= 1 DOLLARS)
 			maximum_cost = cost ** DEFAULT_MAXIMUM_COST_EXPONENT
-		else
+		else if(cost > 0)
 			maximum_cost = cost * 2
+		else
+			maximum_cost = 0
 	minimum_cost = max(1 CENTS, minimum_cost)
 	START_PROCESSING(SSmarket, src)
 
