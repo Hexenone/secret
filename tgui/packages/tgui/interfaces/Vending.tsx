@@ -1,6 +1,6 @@
 import { classes } from 'common/react';
 import { useBackend } from '../backend';
-import { Box, Button, Section, Table } from '../components';
+import { Box, Button, Section, Table, Icon, Stack } from '../components';
 import { Window } from '../layouts';
 
 type VendingData = {
@@ -8,8 +8,8 @@ type VendingData = {
   department: string;
   jobDiscount: number;
   product_records: ProductRecord[];
-  coin_records: CoinRecord[];
   hidden_records: HiddenRecord[];
+  coin_records: CoinRecord[];
   user: UserData;
   stock: StockItem[];
   extended_inventory: boolean;
@@ -21,23 +21,26 @@ type ProductRecord = {
   path: string;
   name: string;
   price: number;
+  tax_price: number;
   max_amount: number;
   ref: string;
-}
-
-type CoinRecord = {
-  path: string;
-  name: string;
-  price: number;
-  max_amount: number;
-  ref: string;
-  premium: boolean;
 }
 
 type HiddenRecord = {
   path: string;
   name: string;
   price: number;
+  tax_price: number;
+  max_amount: number;
+  ref: string;
+  premium: boolean;
+}
+
+type CoinRecord = {
+  path: string;
+  name: string;
+  price: number;
+  tax_price: number;
   max_amount: number;
   ref: string;
   premium: boolean;
@@ -203,35 +206,51 @@ export const Vending = (props, context) => {
       width={450}
       height={600}>
       <Window.Content scrollable>
-        {!!onstation && (
-          <Section title="User">
-            {user && (
-              <Box>
-                Welcome, <b>{user.name}</b>,
-                {' '}
-                <b>{user.job || 'Unemployed'}</b>!
-                <br />
-                Your balance is <b>{user.cash} credits</b>.
-              </Box>
-            ) || (
-              <Box color="light-grey">
-                No registered ID card!<br />
-                Please contact your local HoP!
-              </Box>
-            )}
-          </Section>
-        )}
-        <Section title="Products">
-          <Table>
-            {inventory.map(product => (
-              <VendingRow
-                key={product.name}
-                custom={custom}
-                product={product}
-                productStock={stock[product.name]} />
-            ))}
-          </Table>
-        </Section>
+        <Stack fill vertical>
+          {!!onstation && (
+            <Stack.Item>
+              <Section title="User">
+                {user && (
+                  <Box>
+                    Welcome, <b>{user.name}</b>,
+                    {' '}
+                    <b>{user.job || 'Unemployed'}</b>!
+                    <br />
+                    Your balance is <b>{user.cash} credits</b>.
+                  </Box>
+                ) || (
+                  <Box color="light-grey">
+                    No registered ID card!<br />
+                    Please contact your local HoP!
+                  </Box>
+                )}
+              </Section>
+            </Stack.Item>
+          )}
+          <Stack.Item>
+            <Section
+              title="Products"
+              buttons={
+                !!onstation
+                && user
+                && (
+                  <Box fontSize="16px" color="green">
+                    {(user && user.cash) || 0}$ <Icon name="coins" color="gold" />
+                  </Box>)
+              }
+            >
+              <Table>
+                {inventory.map(product => (
+                  <VendingRow
+                    key={product.name}
+                    custom={custom}
+                    product={product}
+                    productStock={stock[product.name]} />
+                ))}
+              </Table>
+            </Section>
+          </Stack.Item>
+        </Stack>
       </Window.Content>
     </Window>
   );

@@ -77,27 +77,12 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/machinery/vending/killbitches/build_inventory(list/productlist, list/recordlist, start_empty)
-	default_price = round(initial(default_price) * SSeconomy.inflation_value())
-	extra_price = round(initial(extra_price) * SSeconomy.inflation_value())
-	for(var/typepath in productlist)
-		var/amount = productlist[typepath]
-		if(isnull(amount))
-			amount = 0
-
-		var/obj/item/temp = typepath
-		var/datum/data/vending_product/R = new /datum/data/vending_product()
-		GLOB.vending_products[typepath] = 1
-		R.name = initial(temp.name)
-		R.product_path = typepath
-		if(!start_empty)
-			R.amount = amount
-		R.max_amount = amount
-		///ITS FREE
-		R.custom_price = 0
-		R.custom_premium_price = 0
-		R.age_restricted = initial(temp.age_restricted)
-		R.colorable = !!(initial(temp.greyscale_config) && initial(temp.greyscale_colors) && (initial(temp.flags_1) & IS_PLAYER_COLORABLE_1))
-		recordlist += R
+	. = ..()
+	for(var/datum/data/vending_product/vending_product as anything in recordlist)
+		vending_product.custom_price = 0
+		vending_product.tax_price = 0
+		vending_product.custom_premium_price = 0
+		vending_product.tax_price_premium = 0
 
 /obj/machinery/vending/killbitches/resupply
 	name = "\improper Recovery Atire-Putas"

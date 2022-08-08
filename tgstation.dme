@@ -5527,6 +5527,7 @@
 #include "modular_septic\code\modules\uplink\shitty_meme_uplink_items.dm"
 #include "modular_septic\code\modules\uplink\uplink_items.dm"
 #include "modular_septic\code\modules\vending\_vending.dm"
+#include "modular_septic\code\modules\vending\_vending_product.dm"
 #include "modular_septic\code\modules\vending\autodrobe.dm"
 #include "modular_septic\code\modules\vending\killbitches.dm"
 #include "modular_septic\code\modules\vending\medical.dm"

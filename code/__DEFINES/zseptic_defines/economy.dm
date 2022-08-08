@@ -8,3 +8,6 @@
 
 #define ACCOUNT_MASTER "MSR"
 #define ACCOUNT_MASTER_NAME "Master Budget"
+
+// ~tax defines
+#define TAX_VENDING "Vending"
