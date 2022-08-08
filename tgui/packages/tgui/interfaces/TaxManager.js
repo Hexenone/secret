@@ -22,6 +22,7 @@ export const TaxManagerContent = (props, context) => {
                   minValue={0}
                   maxValue={100}
                   step={1}
+                  unit="%"
                   onChange={(e, value) => act('change_tax', {
                     tax: tax.name,
                     new_value: value/100,
@@ -45,6 +46,7 @@ export const TaxManagerContent = (props, context) => {
                   minValue={0}
                   maxValue={1000}
                   step={0.1}
+                  unit="$"
                   onChange={(e, value) => act('change_salary', {
                     account_id: account.account_id,
                     new_value: value,
