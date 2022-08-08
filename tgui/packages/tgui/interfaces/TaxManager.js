@@ -1,9 +1,10 @@
 import { useBackend } from '../backend';
-import { LabeledList, NumberInput, Section, Stack } from '../components';
+import { BlockQuote, LabeledList, NumberInput, Section, Stack } from '../components';
 
 export const TaxManagerContent = (props, context) => {
   const { act, data } = useBackend(context);
   const {
+    salary_frequency,
     taxes = [],
     accounts = [],
   } = data;
@@ -34,7 +35,14 @@ export const TaxManagerContent = (props, context) => {
         </Section>
       </Stack.Item>
       <Stack.Item>
-        <Section title="Salaries">
+        <Section
+          title="Salaries"
+          buttons={
+            <BlockQuote inline>
+              Salaries are paid every 5 minutes.
+            </BlockQuote>
+          }
+        >
           <LabeledList>
             {accounts.map(account => (
               <LabeledList.Item

@@ -31,6 +31,8 @@
 /datum/computer_file/program/taxes/ui_static_data(mob/user)
 	var/list/data = list()
 
+	var/salary_frequency = DisplayTimeText(SSeconomy.wait)
+	data["salary_frequency"] = salary_frequency
 	var/list/accounts = list()
 	for(var/account_id as anything in SSeconomy.bank_accounts_by_id)
 		var/datum/bank_account/account = SSeconomy.bank_accounts_by_id[account_id]
