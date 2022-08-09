@@ -39,7 +39,7 @@ export const TaxManagerContent = (props, context) => {
           title="Salaries"
           buttons={
             <BlockQuote inline>
-              Salaries are paid every 5 minutes.
+              Salaries are paid every {salary_frequency}.
             </BlockQuote>
           }
         >
