@@ -1,14 +1,6 @@
 /datum/job
 	/// Stat sheet this job uses, if any (ADDITIVE)
 	var/attribute_sheet
-	/// Whether or not this job has a circumcised penis
-	var/penis_circumcised = FALSE
-	/// Minimum breast size for this role (gets converted to cup size)
-	var/min_breastsize = 1
-	/// Maximum breast size for this role (gets converted to cup size)
-	var/max_breastsize = 3
-	/// Whether or not this job has lactating breasts
-	var/breasts_lactating = FALSE
 	/// With this set to TRUE, the loadout will be applied before a job clothing will be
 	var/no_dresscode = FALSE
 	/// Whether the job can use the loadout system
@@ -17,12 +9,12 @@
 	var/list/banned_quirks
 	/// A list of slots that can't have loadout items assigned to them if no_dresscode is applied, used for important items such as ID, PDA, backpack and headset
 	var/list/blacklist_dresscode_slots
-	/// Whitelist of allowed species for this job. If not specified then all roundstart races can be used. Associative with TRUE.
+	/// Whitelist of allowed species for this job. If not specified then all roundstart races can be used. Associative with TRUE
 	var/list/species_whitelist
-	/// Blacklist of species for this job. Associative with TRUE.
+	/// Blacklist of species for this job.
 	var/list/species_blacklist
 	/// Which languages does the job require, associative to LANGUAGE_UNDERSTOOD or LANGUAGE_SPOKEN
-	var/list/required_languages = list(/datum/language/common = LANGUAGE_UNDERSTOOD|LANGUAGE_SPOKEN)
+	var/list/required_languages = list(/datum/language/common = LANGUAGE_UNDERSTOOD)
 
 /datum/job/after_spawn(mob/living/spawned, client/player_client)
 	. = ..()
@@ -30,8 +22,6 @@
 		assign_attributes(spawned, player_client)
 	if(ishuman(spawned))
 		var/mob/living/carbon/human/spawned_human = spawned
-		var/old_intent = spawned.a_intent
-		spawned.a_intent = INTENT_GRAB
 		//lemun
 		if(player_client?.ckey == "ltkoepple")
 			spawned.put_in_hands(new /obj/item/food/grown/citrus/lemon(spawned.drop_location()), FALSE)
@@ -41,31 +31,17 @@
 		//ilovelean
 		if(player_client?.ckey == "shyshadow")
 			spawned.put_in_hands(new /obj/item/reagent_containers/glass/bottle/lean(spawned.drop_location()), FALSE)
-		//bob joga
-		if(player_client?.ckey == "chaoticagent")
-			spawned.put_in_hands(new /obj/item/food/egg(spawned.drop_location()), FALSE)
-		//hentai storm
-		if(player_client?.ckey == "hentaistorm")
-			spawned.put_in_hands(new /obj/item/clothing/glasses/itobe/agent(spawned.drop_location()), FALSE)
-		//sponge
-		if(player_client?.ckey == "phun phun")
-			spawned.put_in_hands(new /obj/item/cellphone/sponge(spawned.drop_location()), FALSE)
-		//thug hunter equipment
-		if(player_client?.ckey == "glennerbean")
-			spawned.put_in_hands(new /obj/item/gun/ballistic/automatic/pistol/remis/glock17(spawned.drop_location()), FALSE)
-			spawned.put_in_hands(new /obj/item/ammo_box/magazine/glock9mm(spawned.drop_location()), FALSE)
+		if(player_client?.ckey == "PurpleShritedEyeStaber")
+			spawned.put_in_hands(new /obj/item/gun/ballistic/automatic/pistol/remis/combatmaster(spawned.drop_location()), FALSE)
 		//mugmoment
-		if(player_client?.ckey == "garfieldlives")
+		if(player_client?.ckey == "GarfieldLives")
 			spawned.put_in_hands(new /obj/item/reagent_containers/food/drinks/soda_cans/mug(spawned.drop_location()), FALSE)
 		if(SSmapping.config?.everyone_is_fucking_naked)
 			incinerate_inventory(spawned)
 		else
 			if(locate(/obj/effect/landmark/start/generic) in get_turf(spawned))
 				put_stuff_in_spawn_closet(spawned)
-		spawned.a_intent = old_intent
 		spawned.gain_extra_effort(1, TRUE)
-		if(prob(30))
-			spawned_human.gain_trauma(/datum/brain_trauma/mild/phobia, TRAUMA_RESILIENCE_BASIC)
 		var/birthday = spawned_human.day_born
 		var/birthday_month = month_text(spawned_human.month_born)
 		var/station_realtime = SSstation_time.get_station_realtime()
@@ -137,7 +113,6 @@
 								spawned.wear_neck, \
 								spawned.head, \
 								spawned.gloves, \
-								spawned.wrists, \
 								spawned.shoes, \
 								spawned.glasses, \
 								spawned.wear_id, \
@@ -171,7 +146,6 @@
 								spawned.shoes, \
 								spawned.glasses, \
 								spawned.wear_id, \
-								spawned.wrists, \
 								spawned.r_store, \
 								spawned.l_store, \
 								spawned.s_store, \
@@ -202,6 +176,9 @@
 		var/datum/cultural_info/birthsign = GLOB.culture_birthsigns[prefs.birthsign]
 		if(birthsign)
 			birthsign.apply(spawned_human)
+	//Woman moment
+	if(spawned_human.gender == FEMALE)
+		spawned_human.attributes.add_sheet(/datum/attribute_holder/sheet/woman_moment)
 	//Combat map moment
 	if(SSmapping.config?.combat_map)
 		spawned_human.attributes.add_sheet(/datum/attribute_holder/sheet/combat_map)

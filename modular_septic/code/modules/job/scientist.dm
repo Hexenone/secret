@@ -1,9 +1,16 @@
 /datum/job/scientist
-	total_positions = 0
-	spawn_positions = 0
+	title = "Technologist"
+	departments_list = list(
+		/datum/job_department/proletariat,
+	)
+	department_head = list("Technocrat")
+	supervisors = "the technocrat"
+
 	outfit = /datum/outfit/job/scientist/zoomtech
 
 /datum/outfit/job/scientist/zoomtech
 	name = "ZoomTech Technologist"
+
+	belt = /obj/item/modular_computer/tablet/preset/cheap
 
 	skillchips = null

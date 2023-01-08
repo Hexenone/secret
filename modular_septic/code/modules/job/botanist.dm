@@ -1,8 +1,16 @@
 /datum/job/botanist
-	total_positions = 0
-	spawn_positions = 0
+	title = "Seeder"
+	departments_list = list(
+		/datum/job_department/bourgeouis,
+	)
+	department_head = list("Mayor", "Gatekeeper")
+	supervisors = "the innkeeper"
+
 	outfit = /datum/outfit/job/botanist/zoomtech
 
 /datum/outfit/job/botanist/zoomtech
 	name = "ZoomTech Seeder"
+
+	belt = /obj/item/modular_computer/tablet/preset/cheap
+
 	skillchips = null

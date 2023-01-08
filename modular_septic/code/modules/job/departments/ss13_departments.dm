@@ -1,25 +1,23 @@
-/*
 /datum/job_department/command
-	display_order = 1
+	display_order = 20
 
 /datum/job_department/security
-	display_order = 3
+	display_order = 21
 
 /datum/job_department/engineering
-	display_order = 2
+	display_order = 22
 
 /datum/job_department/medical
-	display_order = 4
+	display_order = 23
 
 /datum/job_department/science
-	display_order = 5
+	display_order = 24
 
 /datum/job_department/cargo
-	display_order = 6
+	display_order = 25
 
 /datum/job_department/service
-	display_order = 7
+	display_order = 26
 
 /datum/job_department/silicon
-	display_order = 8
-*/
+	display_order = 27

@@ -99,9 +99,3 @@
 
 /datum/job/janitor
 	attribute_sheet = /datum/attribute_holder/sheet/job/janitor
-/*
-/datum/job/venturer
-	attribute_sheet = /datum/attribute_holder/sheet/job/venturer
-*/
-/datum/job/chaot
-	attribute_sheet = /datum/attribute_holder/sheet/job/chaot

@@ -4,10 +4,10 @@
 USE_FIELD_OF_VISION
 
 ## Whether or not to forcefully disable atmos
-DISABLE_ATMOS
+#DISABLE_ATMOS
 
 ## Speed buff from sprinting
-SPRINT_SPEED 1
+SPRINT_SPEED 1.2
 
 ## Stamina cost per tile while sprinting
 SPRINT_STAMINA_COST 2

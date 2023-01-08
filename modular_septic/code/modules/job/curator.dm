@@ -6,4 +6,7 @@
 
 /datum/outfit/job/curator/zoomtech
 	name = "ZoomTech Curator"
+
+	belt = /obj/item/modular_computer/tablet/preset/cheap
+
 	skillchips = null
