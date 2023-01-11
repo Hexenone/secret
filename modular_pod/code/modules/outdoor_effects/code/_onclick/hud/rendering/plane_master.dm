@@ -23,12 +23,3 @@
 /atom/movable/screen/plane_master/weather_effect/Destroy()
 	. = ..()
 	SSoutdoor_effects.weather_planes_need_vis -= src
-
-//Contains all sunlight overlays
-/atom/movable/screen/plane_master/sunlight
-	name = "sunlight plane master"
-	plane = SUNLIGHTING_PLANE
-	blend_mode = BLEND_MULTIPLY
-	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	render_target = SUNLIGHTING_RENDER_TARGET
-	render_relay_plane = null  //Used as layer filter for sunlight fullscreen

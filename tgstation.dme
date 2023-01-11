@@ -4634,7 +4634,6 @@
 #include "modular_septic\code\game\objects\machinery\noisy.dm"
 #include "modular_septic\code\game\objects\machinery\portable_turret.dm"
 #include "modular_septic\code\game\objects\machinery\status_display.dm"
-#include "modular_septic\code\game\objects\machinery\suit_storage_unit.dm"
 #include "modular_septic\code\game\objects\machinery\camera\camera.dm"
 #include "modular_septic\code\game\objects\machinery\computer\camera.dm"
 #include "modular_septic\code\game\objects\machinery\computer\information_terminal.dm"

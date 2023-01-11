@@ -221,12 +221,6 @@
 
 //---------- LIGHTING -------------
 
-//MOJAVE MODULE OUTDOOR_EFFECTS -- BEGIN
-// This is not rendered, a fullscreen effect uses the render_target as a layer filter to display on the lighting plane
-#define SUNLIGHTING_PLANE 99
-#define SUNLIGHTING_RENDER_TARGET "*SUNLIGHT_PLANE"
-//MOJAVE MODULE OUTDOOR_EFFECTS -- END
-
 ///Normal 1 per turf dynamic lighting objects
 #define LIGHTING_PLANE 100
 
