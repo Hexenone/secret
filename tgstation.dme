@@ -4631,6 +4631,7 @@
 #include "modular_septic\code\game\objects\machinery\dance_machine.dm"
 #include "modular_septic\code\game\objects\machinery\deployable.dm"
 #include "modular_septic\code\game\objects\machinery\fire_alarm.dm"
+#include "modular_septic\code\game\objects\machinery\noisy.dm"
 #include "modular_septic\code\game\objects\machinery\portable_turret.dm"
 #include "modular_septic\code\game\objects\machinery\status_display.dm"
 #include "modular_septic\code\game\objects\machinery\suit_storage_unit.dm"
