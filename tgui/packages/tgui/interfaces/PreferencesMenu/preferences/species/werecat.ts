@@ -27,7 +27,7 @@ const Perluni: Species = {
   },
   lore: [
     "Known as the bundler people, these cat folk have proven themselves as hard workers in the field of cargo and transportation.",
-    "While with a tainted past of sapient sacrifice, and other immoral rituals, they have proven capable workers for ZoomTech,",
+    "While with a tainted past of sapient sacrifice, and other immoral rituals, they have proven capable workers for Houck,",
     "not just as day labor but as entertainers and whatever trades benefit from hardiness.",
   ],
 };

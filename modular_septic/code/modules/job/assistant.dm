@@ -1,5 +1,5 @@
 /datum/job/assistant
-	title = "Beggar"
+	title = "Mooncalf"
 	departments_list = list(
 		/datum/job_department/unpeople,
 	)
@@ -14,7 +14,7 @@
 	ADD_TRAIT(spawned, TRAIT_ILLITERATE, "[type]")
 
 /datum/outfit/job/assistant/zoomtech
-	name = "ZoomTech Beggar"
+	name = "Mooncalf"
 
 	uniform = /obj/item/clothing/under/color/grey/ancient
 	id = null

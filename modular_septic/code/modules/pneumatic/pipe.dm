@@ -1,6 +1,6 @@
 /obj/structure/pneumaticpipe
 	name = "pneumatic pipe"
-	desc = "A pneumatic pipe that run throughout ZoomTech outposts and stations, implemented to get corn syrup and M16's to the enemy and the blue helmets to the friendlies."
+	desc = "A pneumatic pipe that run throughout Houck outposts and stations, implemented to get corn syrup and M16's to the enemy and the blue helmets to the friendlies."
 	icon = 'icons/obj/atmospherics/pipes/disposal.dmi'
 	anchored = TRUE
 	density = FALSE

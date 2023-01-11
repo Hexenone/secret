@@ -1,6 +1,6 @@
 /datum/uplink_item/dangerous/surplus_knife
 	name = "Z Hunter Surplus Knife"
-	desc = "The perfect companion for the surplus rifle. This small sized gremlin is sure to kill any ZoomTech loyalist with disgust."
+	desc = "The perfect companion for the surplus rifle. This small sized gremlin is sure to kill any Houck loyalist with disgust."
 	item = /obj/item/knife/combat/zhunter
 	cost = 1
 

@@ -87,7 +87,7 @@
 
 /obj/item/gun/ballistic/automatic/remis/smg/bastardo
 	name = "\improper Feio Bastardo R1 submachine gun"
-	desc = "A fully-automatic submachine gun issued to ZoomTech officers and military force with an accelerated fire delay, comes with a folding stock, and a threaded barrel for suppression."
+	desc = "A fully-automatic submachine gun issued to Houck officers and military force with an accelerated fire delay, comes with a folding stock, and a threaded barrel for suppression."
 	icon = 'modular_septic/icons/obj/items/guns/48x32.dmi'
 	lefthand_file = 'modular_septic/icons/obj/items/guns/inhands/smg_lefthand.dmi'
 	righthand_file = 'modular_septic/icons/obj/items/guns/inhands/smg_righthand.dmi'

@@ -1,5 +1,5 @@
 /obj/item/clothing/suit/armor/vest/capcarapace/zoomtech
-	name = "\proper ZoomTech armored leather coat"
+	name = "\proper Houck armored leather coat"
 	desc = "An armored, 100% genuine manbeast leather coat."
 	icon = 'modular_septic/icons/obj/clothing/suits.dmi'
 	icon_state = "zcap_coat"

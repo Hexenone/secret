@@ -1,5 +1,5 @@
 /datum/job/quartermaster
-	title = "Merchant"
+	title = "Dealer"
 	departments_list = list(
 		/datum/job_department/bourgeouis,
 	)

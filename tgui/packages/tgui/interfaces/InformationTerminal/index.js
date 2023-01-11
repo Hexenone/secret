@@ -22,7 +22,7 @@ export const InformationTerminal = (props, context) => {
           grow
           title={(
             <Box textAlign="center">
-              ZoomTech Publicitarium System v1.11
+              Houck Publicitarium System v1.11
             </Box>
           )}
         >

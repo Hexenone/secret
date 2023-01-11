@@ -20,7 +20,7 @@ const Lizard: Species = {
   lore: [
     "Iglaak a strange race who have suffered greatly from ITOBEs enslavement of them.",
     "Their past is shrouded in mystery, as their brutal enslavement eroded pretty much all memory of it.",
-    "Those lucky enough to be freed by ZoomTech in the course of the great war eagerly join her projects hoping one day to liberate their homeland. If they can find it.",
+    "Those lucky enough to be freed by Houck in the course of the great war eagerly join her projects hoping one day to liberate their homeland. If they can find it.",
   ],
 };
 

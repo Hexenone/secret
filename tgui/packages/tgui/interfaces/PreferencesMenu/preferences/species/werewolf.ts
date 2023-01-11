@@ -28,7 +28,7 @@ const Shibu: Species = {
   lore: [
     "Steadfast, devout and loyal. These are the qualities that define the Shibu.",
     "Once on the brink in a world of collapsing tradition and ever more bitter conditions,",
-    "the Shibu through loyalty to ZoomTech have helped transform Nevado and plan to bring it ever forward",
+    "the Shibu through loyalty to Houck have helped transform Nevado and plan to bring it ever forward",
     "into a new golden age under the guidance of their elders.",
   ],
 };

@@ -206,7 +206,7 @@
 
 /obj/item/surgical_drapes
 	name = "surgical drapes"
-	desc = "This might be hard to believe, but these are actually never used in ZoomTech surgical theatres."
+	desc = "This might be hard to believe, but these are actually never used in Houck surgical theatres."
 	icon = 'modular_septic/icons/obj/items/surgery_tools.dmi'
 	icon_state = "drapes"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'

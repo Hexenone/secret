@@ -2,7 +2,7 @@
 Assistant
 */
 /datum/job/assistant
-	title = "Assistant"
+	title = "Mooncalf"
 	faction = FACTION_STATION
 	total_positions = 0
 	spawn_positions = 0
@@ -33,7 +33,7 @@ Assistant
 	rpg_title = "Lout"
 
 /datum/outfit/job/assistant
-	name = "Assistant"
+	name = "Mooncalf"
 	jobtype = /datum/job/assistant
 	id_trim = /datum/id_trim/job/assistant
 

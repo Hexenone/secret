@@ -1,5 +1,5 @@
 /obj/item/clothing/gloves/combat/zoomtech
-	name = "ZoomTech combat gloves"
+	name = "Combat Gloves"
 	desc = "Treated leather gloves, to protect your itty bitty royal fingers."
 	icon = 'modular_septic/icons/obj/clothing/gloves.dmi'
 	icon_state = "zcap_gloves"
