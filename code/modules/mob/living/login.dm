@@ -26,9 +26,3 @@
 		changeling.regain_powers()
 
 	med_hud_set_status()
-
-	if(stat == DEAD)
-		spawn(100)
-			if(stat != DEAD)
-				return
-			client.ghostize()
