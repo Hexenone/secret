@@ -34,6 +34,8 @@
 	ambientsounds = list('modular_pod/sound/ambi_sounds/borne.ogg', 'modular_pod/sound/ambi_sounds/buffmfffpampam.ogg', 'modular_pod/sound/ambi_sounds/BOOOM.ogg')
 	droning_sound = DRONING_EVIL
 
+/*
+
 /mob/proc/send_naxyu()
 	if(stat != DEAD)
 		return
@@ -61,3 +63,5 @@
 //	character.timeofdeath = timeofdeath
 	character.key = key
 //	character.client.set_macros()
+
+*/
