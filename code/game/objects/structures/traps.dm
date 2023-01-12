@@ -101,12 +101,6 @@
 	L.electrocute_act(30, src, flags = SHOCK_NOGLOVES) // electrocute act does a message.
 	L.Paralyze(stun_time)
 
-/obj/structure/trap/stun/chaot
-
-/obj/structure/trap/stun/chaot/trap_effect(mob/living/L)
-	if(is_chaot_job(L.mind.assigned_role))
-		return
-
 /obj/structure/trap/stun/hunter
 	name = "bounty trap"
 	desc = "A trap that only goes off when a fugitive steps on it, announcing the location and stunning the target. You'd better avoid it."
@@ -203,17 +197,6 @@
 	L.Paralyze(20)
 	new /obj/effect/hotspot(get_turf(src))
 
-/obj/structure/trap/fire/chaot
-
-/obj/structure/trap/fire/chaot/trap_effect(mob/living/L)
-	var/datum/job/job = SSjob.GetJob(/datum/job/chaot)
-	if(is_chaot_job(job))
-//	if(is_chaot_job(L.mind.assigned_role))
-		return
-	to_chat(L, span_danger("<B>Pox Harve!</B>"))
-	L.Paralyze(20)
-	new /obj/effect/hotspot(get_turf(src))
-
 /obj/structure/trap/chill
 	name = "frost trap"
 	desc = "A trap that will chill you to the bone. You'd better avoid it."
@@ -225,14 +208,6 @@
 	L.Paralyze(20)
 	L.adjust_bodytemperature(-300)
 	L.apply_status_effect(/datum/status_effect/freon)
-
-/obj/structure/trap/chill/chaot
-
-/obj/structure/trap/chill/chaot/trap_effect(mob/living/L)
-//	if(is_chaot_job(L.mind.assigned_role))
-	var/datum/job/job = SSjob.GetJob(/datum/job/chaot)
-	if(is_chaot_job(job))
-		return
 
 /obj/structure/trap/damage
 	name = "earth trap"

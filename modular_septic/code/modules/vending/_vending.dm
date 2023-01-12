@@ -6,7 +6,7 @@
 	/// Infected by pain virus
 	var/infected = FALSE
 	/// Sound we make when spitting a phrase while infected with pain
-	var/infected_noise = 'modular_septic/sound/effects/pain_fuck.ogg'
+	var/infected_noise = 'modular_septic/sound/effects/pain_fuck.wav'
 
 /obj/machinery/vending/Initialize(mapload)
 	. = ..()
